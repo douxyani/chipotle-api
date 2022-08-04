@@ -3,13 +3,13 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 
 mongoose
-  .connect("mongodb://localhost:27017/acmedb", { useNewUrlParser: true })
+  .connect("mongodb+srv://chipnotify:Detector123@cluster0.gi8itvo.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     const app = express();
     app.use(express.json());
     app.use("/api", routes);
 
-    app.listen(5000, () => {
+    app.listen(3000, () => {
       console.log("Server has started!");
     });
   });
