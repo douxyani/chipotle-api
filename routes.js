@@ -2,6 +2,10 @@ const express = require("express");
 const tokenDB = require("./models/tokenDB");
 const router = express.Router();
 
+router.get('/', async (req, res) => {
+  res.send('hi')
+})
+
 router.post("/tokens", async (req, res) => {
   await tokenDB.create({
     id: req.body.id,
