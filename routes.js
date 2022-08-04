@@ -7,10 +7,13 @@ router.get('/', async (req, res) => {
 })
 
 router.post("/tokens", async (req, res) => {
-  await tokenDB.create({
-    id: req.body.id,
+  await tokenDB.findOneAndUpdate({
+    id: req.body.id
+  }, {
     pushToken: req.body.token
-  });
+  }, {
+    upsert: true
+  })
   res.send({ status: 'ok' });
 });
 
