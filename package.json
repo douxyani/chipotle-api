@@ -1,13 +1,13 @@
 {
-  "name": "learn-express",
-  "version": "1.0.0",
+  "name": "chipotle-api",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "Rahman Fadhil <rhmnfadhil@gmail.com> (https://rahmanfadhil.com/)",
+  "author": "Douxyani",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.1",
