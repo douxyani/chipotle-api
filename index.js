@@ -1,9 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+require('dotenv').config()
 
 mongoose
-  .connect("mongodb+srv://chipnotify:Detector123@cluster0.gi8itvo.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGOOSE, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     const app = express();
     app.use(express.json());
