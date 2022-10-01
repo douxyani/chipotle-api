@@ -31,7 +31,6 @@ router.post('/tokens/notis/:id', async (req, res) => {
   }
 })
 
-
 router.get('/tokens/notis/:id', async (req, res) => {
   try {
     const data = await tokenDB.findOne({

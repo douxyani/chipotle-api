@@ -5,18 +5,18 @@ module.exports = model('token', new Schema({
     pushToken: String,
     chipotle: {
         type: Boolean,
-        default: true
+        default: Boolean(true)
     },
     fooji: {
         type: Boolean,
-        default: true
+        default: Boolean(true)
     },
     promo: {
         type: Boolean,
-        default: true
+        default: Boolean(true)
     },
     deal: {
         type: Boolean,
-        default: true
+        default: Boolean(true)
     }
 }))
