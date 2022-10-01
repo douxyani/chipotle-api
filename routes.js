@@ -7,19 +7,24 @@ router.get('/', async (req, res) => {
 })
 
 router.post("/tokens", async (req, res) => {
-  await tokenDB.findOneAndUpdate({
+  console.log(req.body)
+  const doc = await tokenDB.findOneAndUpdate({
     id: req.body.id
   }, {
     pushToken: req.body.token
   }, {
-    upsert: true
+    upsert: true,
+    returnDocument: true
   })
+  console.log(doc)
   res.send({ status: 'ok' });
 });
 
 router.post('/tokens/notis/:id', async (req, res) => {
   try {
-    await tokenDB.findOneAndUpdate({ 
+    console.log(req.body)
+
+    await tokenDB.findOneAndUpdate({
       id: req.params.id
     }, {
       ...req.body
