@@ -11,6 +11,10 @@ module.exports = model('token', new Schema({
         type: Boolean,
         default: Boolean(true)
     },
+    cashapp: {
+        type: Boolean,
+        default: Boolean(true)
+    },
     promo: {
         type: Boolean,
         default: Boolean(true)
